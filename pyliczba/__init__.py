@@ -1,0 +1,1 @@
+from pyliczba import *

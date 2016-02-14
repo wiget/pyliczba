@@ -2,7 +2,7 @@
 
 import unittest
 from six import u
-from pyliczba import pyliczba
+from pyliczba import *
 
 
 class TestKwotaSlownie(unittest.TestCase):
