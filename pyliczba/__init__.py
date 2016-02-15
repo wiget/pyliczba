@@ -1,1 +1,1 @@
-from pyliczba import *
+from .pyliczba import *
