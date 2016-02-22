@@ -5,8 +5,20 @@ python:
   - "2.7"
   - "3.3"
   - "3.4"
-  - "3.5"
   - "pypy"
   - "pypy3"
+
+matrix:
+    include:
+        - python: "3.5"
+          env: COVERAGE=1
+
 install: pip install tox-travis
+
+before_install:
+    - "[ ! -z $COVERAGE ] && travis_retry pip install python-coveralls || true"
+
+after_success:
+    - "[ ! -z $COVERAGE ] && coveralls || true"
+
 script: tox

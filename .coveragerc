@@ -1,0 +1,5 @@
+[run]
+source = pyliczba
+cover_pylib = False
+branch = True
+omit = pyliczba/tests/*.py
